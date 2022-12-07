@@ -1,16 +1,21 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.gms.google-services'
 }
 
 android {
     namespace 'com.leusoft.taskcore'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.leusoft.taskcore"
         minSdk 26
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -41,4 +46,81 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.compose.ui:ui-graphics:1.0.0-rc01'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.5'
+
+    /// OCR
+
+    implementation 'com.google.android.gms:play-services-vision:19.0.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.4.2"
+    kapt "androidx.room:room-compiler:2.4.2"
+    implementation "androidx.room:room-ktx:2.4.2"
+    androidTestImplementation "androidx.room:room-testing:2.4.2"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
+
+    // Kotlin components
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5"
+
+
+    //anko
+    implementation "org.jetbrains.anko:anko:$anko_version"
+    implementation "org.jetbrains.anko:anko-design:$anko_version"
+    implementation "org.jetbrains.anko:anko-coroutines:$anko_version"
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    kapt 'com.github.bumptech.glide:compiler:4.13.0'
+
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+    implementation 'com.google.firebase:firebase-core:21.0.0'
+    implementation 'com.google.firebase:firebase-firestore:24.2.0'
+  //  implementation 'com.google.firebase:firebase-storage:20.0.1'
+   // implementation 'com.firebaseui:firebase-ui-storage:3.3.1'
+   // implementation 'com.google.firebase:firebase-messaging:23.0.6'
+    implementation 'com.google.firebase:firebase-auth:21.0.6'
+
+
+    //implementation 'com.google.firebase:firebase-auth-ktx'
+    //implementation 'com.firebaseui:firebase-ui-auth:4.3.2'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3'
+
+    implementation 'com.opencsv:opencsv:5.6'
+
+    implementation 'com.itextpdf:itextg:5.5.10'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
+
+    kotlin {
+        experimental {
+            coroutines "enable"
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
 }
