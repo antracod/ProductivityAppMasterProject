@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".auth.LoginActivity" >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/BoldBlackText"
+        android:textSize="30sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Welcome Back!" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/RegularGrayText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="16sp"
+
+        android:text="Log back in your account \nto resume your work " />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        style="@style/StandardInputField"
+        android:id="@+id/loginEditTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:drawableStart="@drawable/ic_hard_avatar"
+        android:drawableTint="@color/grey60"
+        android:drawablePadding="20dp"
+        android:hint="Email"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="textEmailAddress" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        style="@style/StandardInputField"
+        android:id="@+id/loginEditTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:drawableStart="@drawable/ic_hard_lock"
+        android:drawableTint="@color/grey60"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="textPassword" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryRoundButton"
+        android:id="@+id/loginSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="20dp"
+        android:text="LOG IN"
+
+        android:textAllCaps="false"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/OutlineRoundButton"
+        android:id="@+id/loginScreenRegisterAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="20dp"
+        android:text="Don't have an account? Create one"
+        android:textAllCaps="false"
+        android:layout_marginBottom="20dp"
+        />
+
+</LinearLayout>

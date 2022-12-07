@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1063300790612",
+    "project_id": "taskcore-bc444",
+    "storage_bucket": "taskcore-bc444.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063300790612:android:50c57b505f93026673f0c1",
+        "android_client_info": {
+          "package_name": "com.leusoft.taskcore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063300790612-bur3std62h7up8jv3u7gvfj8cctc77kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhKsvqcRqpuoZhOA-w4sYprCaqNY6bH0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063300790612-bur3std62h7up8jv3u7gvfj8cctc77kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
