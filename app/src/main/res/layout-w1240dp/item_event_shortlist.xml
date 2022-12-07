@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/eventSrConstraint"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/eventSRLinearLayout"
+        android:background="@drawable/round_outline_shape"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/RegularBlackText"
+            android:id="@+id/eventNameRowItemTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Title" />
+
+        <TextView
+            style="@style/RegularBlackText"
+            android:id="@+id/eventDescriptionRowItemTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description" />
+
+        <TextView
+            style="@style/RegularBlackText"
+            android:id="@+id/eventStartTimeRowItemTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StartDate" />
+
+        <TextView
+            style="@style/RegularBlackText"
+            android:id="@+id/eventEndTimeRowItemTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EndDate" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

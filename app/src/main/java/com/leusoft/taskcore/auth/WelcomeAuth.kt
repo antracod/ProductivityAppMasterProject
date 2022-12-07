@@ -6,7 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import com.firebase.ui.auth.AuthUI
+import com.firebase.ui.auth.ErrorCodes
+import com.firebase.ui.auth.IdpResponse
+import com.leusoft.taskcore.DashboardActivity
 import com.leusoft.taskcore.R
+import com.leusoft.taskcore.utils.FirestoreUtil
 import org.jetbrains.anko.clearTask
 import org.jetbrains.anko.indeterminateProgressDialog
 import org.jetbrains.anko.intentFor
@@ -17,7 +22,8 @@ class WelcomeAuth : AppCompatActivity() {
 
     private val RC_SIGN_IN = 1
 
-    private val signInProviders = listOf(AuthUI.IdpConfig.EmailBuilder()
+    private val signInProviders = listOf(
+        AuthUI.IdpConfig.EmailBuilder()
         .setAllowNewAccounts(true)
         .setRequireName(true)
         .build())
