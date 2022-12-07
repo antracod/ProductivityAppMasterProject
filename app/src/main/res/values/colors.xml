@@ -7,4 +7,43 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="primary100">#6146C6</color>
+    <color name="primary80">#816BD1</color>
+    <color name="primary60">#9F8FDC</color>
+    <color name="primary40">#BFB4E7</color>
+    <color name="primary20">#DDD8F2</color>
+
+    <color name="secondary100">#FFCE93</color>
+    <color name="secondary80">#FEC886</color>
+    <color name="secondary60">#FDD5A3</color>
+    <color name="secondary40">#FEE2C2</color>
+    <color name="secondary20">#FDEFDF</color>
+
+    <color name="grey100">#6A7081</color>
+    <color name="grey80">#888D9A</color>
+    <color name="grey60">#A5A8B2</color>
+    <color name="grey40">#C2C5CC</color>
+    <color name="grey20">#DFE0E4</color>
+
+    <color name="error100">#FF6157</color>
+    <color name="error80">#FF8179</color>
+    <color name="error60">#FE9F99</color>
+    <color name="error40">#FEBFBB</color>
+    <color name="error20">#FDDDDB</color>
+
+    <color name="success100">#61C877</color>
+    <color name="success80">#81D392</color>
+    <color name="success60">#9FDDAC</color>
+    <color name="success40">#BFE8C8</color>
+    <color name="success20">#DDF2E2</color>
+
+    <color name="dark100">#06112D</color>
+    <color name="dark80">#384157</color>
+    <color name="dark60">#696F80</color>
+    <color name="dark40">#9A9FAA</color>
+    <color name="dark20">#CBCDD3</color>
+
+
 </resources>
