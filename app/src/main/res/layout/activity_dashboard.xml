@@ -2,8 +2,201 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
+    android:background="@color/grey20"
+    tools:context=".activities.DashboardActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/demi_round_shape"
+        android:orientation="vertical"
+        android:id="@+id/upperDashboardButtonLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/BoldBlackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Today"
+            android:textSize="30sp">
+
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/openFilterStartedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/full_round_shape"
+                android:backgroundTint="@color/primary100"
+                android:fontFamily="@font/cera_round_medium"
+                android:paddingStart="20sp"
+                android:paddingTop="50dp"
+                android:paddingBottom="20dp"
+                android:text="Started  "
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/dashboardGoToNotebookTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/full_round_shape"
+                android:backgroundTint="@color/secondary100"
+                android:fontFamily="@font/cera_round_medium"
+                android:paddingStart="20dp"
+                android:paddingTop="50dp"
+                android:paddingBottom="20dp"
+
+                android:text="Notes     "
+                android:textColor="@color/white"
+                android:textSize="25sp"
+
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/openFilterOngoingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/full_round_shape"
+                android:backgroundTint="@color/success100"
+                android:fontFamily="@font/cera_round_medium"
+                android:paddingStart="20dp"
+                android:paddingTop="50dp"
+
+                android:paddingBottom="20dp"
+                android:layout_weight="1"
+                android:text="Ongoing    "
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/openFilterCompletedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+
+                android:background="@drawable/full_round_shape"
+                android:backgroundTint="@color/error80"
+                android:fontFamily="@font/cera_round_medium"
+                android:paddingStart="20dp"
+                android:paddingTop="50dp"
+
+                android:layout_weight="1"
+                android:paddingBottom="20dp"
+                android:text="Completed"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/upperDashboardButtonLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/addTaskLinearLayoutDashboard"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/AddTasDashboardTexctView"
+            style="@style/BoldBlackText"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Add Task"
+            android:textSize="26sp"/>
+
+        <ImageView
+            android:id="@+id/smallAddTaskImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_plus"
+            android:backgroundTint="@color/secondary80">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/filterTaskTextViewDashboard"
+            style="@style/RegularGrayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:paddingEnd="10dp"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="All Tasks"
+
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dashboardRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTaskLinearLayoutDashboard"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/full_round_shape"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu"
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

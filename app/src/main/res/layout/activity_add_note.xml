@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.AddNoteActivity">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+      <TextView
+          android:id="@+id/addNewNoteAdnoteTextView"
+          style="@style/BoldBlackText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="30dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginEnd="30dp"
+          android:layout_marginBottom="20dp"
+          android:text="Create a new note!"
+
+          android:textSize="30sp" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/addNewNoteTitleEditText"
+          style="@style/StandardInputField"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="30dp"
+          android:layout_marginEnd="30dp"
+          android:layout_marginBottom="30dp"
+          android:drawablePadding="20dp"
+          android:ems="10"
+          android:hint="Title"
+          android:inputType="text" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/addNewNoteDescriptionEditText"
+          style="@style/StandardInputField"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="30dp"
+          android:layout_marginEnd="30dp"
+          android:layout_marginBottom="30dp"
+          android:drawablePadding="20dp"
+          android:ems="10"
+          android:hint="Descriere\n"
+          android:inputType="text|textMultiLine"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addNewNoteScanDocumentButton"
+            style="@style/PrimaryRoundButton"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/secondary80"
+            android:drawableStart="@drawable/ic_plus"
+            android:drawableTint="@color/white"
+            android:padding="20dp"
+            android:text="Scan"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addNewNoteTtsButton"
+            style="@style/PrimaryRoundButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/success80"
+            android:drawableStart="@drawable/ic_speaker"
+            android:drawableTint="@color/white"
+            android:padding="20dp"
+            android:text="Speak"
+            android:textAllCaps="false"
+
+            android:textSize="20dp" />
+      </LinearLayout>
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/addNewNoteSubmitButton"
+          style="@style/PrimaryRoundButton"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="30dp"
+          android:layout_marginEnd="30dp"
+          android:layout_marginBottom="30dp"
+          android:backgroundTint="@color/primary100"
+          android:padding="20dp"
+          android:text="Create note"
+
+          android:textAllCaps="false"
+
+          android:textSize="20dp" />
+    </LinearLayout>
+  </ScrollView>
+
+
+</LinearLayout>

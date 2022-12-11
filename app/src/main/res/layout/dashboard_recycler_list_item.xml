@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/full_round_shape"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageViewRecyclerDashboardCheckBox"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grey80"
+        android:padding="16dp"
+        app:srcCompat="@drawable/ic_checkbox_outline" />
+
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:minWidth="160dp"
+        android:id="@+id/dashboardRecyclerViewMidLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewRecyclerDashboardCheckBox"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/BoldBlackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerViewDashboardNoteTitle"
+            android:text="Task name name">
+
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/taskRowProgressBar"
+            android:progress="0"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressTint="@color/success100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/dashboardRecyclerViewMidLinearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24">
+
+
+    </ImageView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
