@@ -9,6 +9,7 @@ import android.provider.MediaStore
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -24,7 +25,6 @@ import com.leusoft.taskcore.data.Event
 import com.leusoft.taskcore.utils.*
 import com.leusoft.taskcore.viewmodel.EventViewModel
 import com.leusoft.taskcore.viewmodel.NoteViewModel
-import kotlinx.android.synthetic.main.activity_settings.*
 import org.jetbrains.anko.clearTask
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.newTask
@@ -138,8 +138,9 @@ class SettingsActivity : AppCompatActivity() {
             Toast.makeText(this@SettingsActivity,"Succes",Toast.LENGTH_SHORT).show()
             startActivityForResult(Intent.createChooser(intent, "Select Image"), RC_SELECT_IMAGE)
         }
-
-        updateProfileButton.setOnClickListener {
+        val updateProfileBtn = findViewById<Button>(R.id.updateProfileButton)
+        var nameValueSettingsTextView = findViewById<TextView>(R.id.nameValueSettingsTextView)
+        updateProfileBtn.setOnClickListener {
             if (::selectedImageBytes.isInitialized)
                 StorageUtil.uploadProfilePhoto(selectedImageBytes) { imagePath ->
                     FirestoreUtil.updateCurrentUser(nameValueSettingsTextView.text.toString(),
@@ -185,6 +186,8 @@ class SettingsActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         Log.e("BEL","BEL")
 
+        var settingsImageView = findViewById<ImageView>(R.id.settingsImageView)
+
         if (requestCode == RC_SELECT_IMAGE && resultCode == Activity.RESULT_OK &&
             data != null && data.data != null) {
             val selectedImagePath = data.data
@@ -208,7 +211,7 @@ class SettingsActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         FirestoreUtil.getCurrentUser { FireUser ->
-
+            var nameValueSettingsTextView = findViewById<TextView>(R.id.nameValueSettingsTextView)
             nameValueSettingsTextView.setText(FireUser.name)
 
             if (!pictureJustChanged && FireUser.profilePicturePath != null) {
