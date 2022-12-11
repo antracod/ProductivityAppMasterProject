@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/full_round_shape"
+
+    android:layout_margin="20dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView2"
+        style="@style/BoldBlackText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:text="Create something new!"
+
+        android:textSize="30sp" />
+
+     <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryRoundButton"
+        android:id="@+id/popupPlusNotes"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:paddingTop="40dp"
+
+        android:backgroundTint="@color/secondary100"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="26sp"
+
+        android:padding="20dp"
+        android:text="Note"
+
+        android:textAllCaps="false"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryRoundButton"
+        android:id="@+id/popupPlusTask"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingTop="40dp"
+
+        android:backgroundTint="@color/primary100"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="26sp"
+
+        android:padding="20dp"
+        android:text="Task"
+
+        android:textAllCaps="false"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryRoundButton"
+        android:id="@+id/popupPlusEvent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:paddingTop="40dp"
+
+        android:backgroundTint="@color/success100"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="26sp"
+
+        android:padding="20dp"
+        android:text="Event"
+
+        android:textAllCaps="false"
+        />
+
+</LinearLayout>
